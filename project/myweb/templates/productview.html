@@ -1,0 +1,17 @@
+{% block pageContent %} {% load crispy_forms_tags %}
+</html>
+<head>
+<title>SWEET STUFFS</title>
+</head>
+<body>
+    {% block navigation %} {% include 'navigation.html' %} {% endblock navigation %}
+<h1>HI THERE! WELCOME TO OUR BEST SWEET STUFFS EVER</h1>
+<p>We're delighted to have you as our customer.</p>
+<form method="POST" style="background-color:cyan">
+    {% csrf_token %}{{Product_Form|crispy}}
+    <button>add</button>
+</form>
+
+</body>
+</html>
+{% endblock pageContent %}
